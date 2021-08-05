@@ -1,6 +1,23 @@
 <html>
 
 <head>
+<script>  
+//document.write("Welcome to Javatpoint");
+function check() {  
+if(document.getElementById("name").value==""){
+alert("Fullname is missing");  
+}
+else{
+alert("Name entered: "+document.getElementById("name").value);}
+}
+
+function male()
+{alert("Gender selected is Male");}
+
+function female()
+{alert("Gender selected is Female");}
+
+</script> 
 <link rel="stylesheet" type="text/css" href="Style.css">
 <div style="text-align: center;">
 <img src="Capture.png" alt="10000Coders.com logo"></img><br/>
@@ -27,9 +44,9 @@ Make sure that the page looks exactly like this document.</u></p><br/>
 <b>So, let's get started. All the best !</b></div><br/><br/>
 
 <form><table>
-<tr><th>Full Name</th><td><input type="text" name="name" class="form" placeholder="Enter your first name"/></td></tr>
+<tr><th>Full Name</th><td><input type="text" name="name" id="name" class="form" placeholder="Enter your first name"/></td></tr>
 <tr><th>Secret Pin</th><td><input type="text" name="pin" class="form" placeholder="Enter your secret pin"/></td></tr>
-<tr><th>Gender </th><td><input type="radio" name="gender" class="radio-item" value="male"/>Male<input type="radio" name="gender" class="radio-item" value="female"/>Female</td></tr>
+<tr><th>Gender </th><td><input type="radio" name="gender" class="radio-item" value="male" onClick="male()"/>Male<input type="radio" name="gender" class="radio-item" value="female" onClick="female()"/>Female</td></tr>
 <tr><th>I am an expert in</th><td><input type="checkbox" name="skill" value="HTML" style="border-color:green"/>HTML<input type="checkbox" name="skill" value="CSS" color="green" />CSS</td></tr>
 <tr><th>My field of study is</th>
 <td><select class="form"><option value="Select your branch using this select drop-down">Select your branch using this select drop-down</option>
@@ -37,5 +54,5 @@ Make sure that the page looks exactly like this document.</u></p><br/>
 <option value="CSE" class="form">CSE</option></select></td></tr>
 
 <tr><th>Tell more about yourself</th><td><textarea rows="5" column="20" class="form" placeholder="This is text area. Enter your description."></textarea></td></tr>
-<tr><td></td><td><input type="submit" name="Submit" value="Submit"/></td></tr>
+<tr><td></td><td><input type="submit" name="Submit" value="Submit" onClick="check()"/></td></tr>
 </table> </form>
